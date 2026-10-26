@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-frontend pentru API-ul meu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Mini-frontend pentru API-ul meu</h1>
+        <p>Postări preluate dintr-un API</p>
+    </header>
+
+    <main>
+        <section aria-labelledby="form-title">
+            <h2 id="form-title">Adaugă o postare</h2>
+
+            <form id="post-form">
+                <div class="form-group">
+                    <label for="post-title">Titlu</label>
+                    <input
+                        type="text"
+                        id="post-title"
+                        name="title"
+                        required
+                        minlength="3"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="post-body">Conținut</label>
+                    <textarea
+                        id="post-body"
+                        name="body"
+                        required
+                        minlength="3"
+                        rows="4"
+                    ></textarea>
+                </div>
+
+                <button type="submit">Adaugă postarea</button>
+                <p id="form-message" role="alert"></p>
+            </form>
+        </section>
+
+        <section aria-labelledby="posts-title">
+            <h2 id="posts-title">Lista de postări</h2>
+<div class="form-group">
+    <label for="search-posts">Caută o postare</label>
+    <input
+        type="search"
+        id="search-posts"
+        name="search"
+        placeholder="Scrie un titlu..."
+    >
+</div>
+            <p id="status" role="status">Se încarcă postările...</p>
+            <ul id="posts-list"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Proiect realizat pentru tema de mini-frontend API.</p>
+    </footer>
+</body>
+</html>
